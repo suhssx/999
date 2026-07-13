@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>慕摄影 · 内容管理</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><p class="eyebrow">MUVISION STUDIO</p><h1>内容管理</h1></div>
+      <div class="top-actions"><span id="status">未连接</span><a id="login" class="button" href="#">登录后台</a></div>
+    </header>
+    <div id="notice" class="notice" role="status"></div>
+    <section class="panel">
+      <div class="panel-heading"><div><p class="eyebrow">BRAND DETAILS</p><h2>门店信息</h2></div><button id="save-site" class="button button-dark" type="button">保存信息</button></div>
+      <div class="form-grid">
+        <label>服务顾客数<input id="serviceCount"></label><label>好评率<input id="rating"></label><label>专注年数<input id="years"></label>
+        <label>老板手机号<input id="phone" inputmode="tel"></label><label>老板微信号<input id="wechat"></label><label>地图链接<input id="mapUrl" type="url"></label>
+        <label class="wide">首页封面文件名<input id="heroImage"></label><label class="wide">第二页主图文件名<input id="storyImage"></label><label class="wide">视频文件名<input id="video"></label>
+        <label class="wide">首页标语<textarea id="slogan" rows="3"></textarea></label><label class="wide">门店地址<textarea id="address" rows="2"></textarea></label><label class="wide">地铁提示<input id="subway"></label>
+      </div>
+    </section>
+    <section class="panel"><div class="panel-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>套餐价格</h2></div><button id="save-packages" class="button button-dark" type="button">保存套餐</button></div><div id="packages" class="package-grid"></div></section>
+    <section class="panel"><div class="panel-heading"><div><p class="eyebrow">REAL COUPLES</p><h2>新增或替换客片</h2></div></div><div class="upload-grid"><label>文件名（替换时填写原文件名）<input id="photo-name" placeholder="photo-40.jpg"></label><label>分类<select id="photo-category"><option value="portrait">人像情绪</option><option value="scene">场景纪实</option><option value="detail">细节片段</option></select></label><label>照片标题<input id="photo-title" placeholder="新的客片标题"></label><label>选择照片<input id="photo-file" type="file" accept="image/jpeg,image/png,image/webp"></label></div><button id="upload-photo" class="button button-dark" type="button">上传照片并保存</button><div id="gallery-list" class="gallery-list"></div></section>
+    <section class="panel"><div class="panel-heading"><div><p class="eyebrow">PACKAGE MEDIA</p><h2>替换套餐图片</h2></div></div><div class="upload-grid"><label>套餐图片<select id="package-image"><option value="package-7999.jpg">臻藏套餐 · package-7999.jpg</option><option value="package-6999.jpg">典藏套餐 · package-6999.jpg</option><option value="package-5999.jpg">轻奢套餐 · package-5999.jpg</option></select></label><label>选择图片<input id="package-file" type="file" accept="image/jpeg,image/png,image/webp"></label></div><button id="upload-package" class="button button-dark" type="button">替换套餐图片</button></section>
+    <footer>内容保存后会生成 GitHub 提交记录，客户网站刷新后读取最新内容。预约仍建议通过老板微信或电话处理。</footer>
+  </main>
+  <script src="./settings.js"></script><script src="./app.js"></script>
+</body>
+</html>
