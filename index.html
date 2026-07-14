@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="慕摄影婚纱摄影预约官网，记录每一对新人的独一无二。">
   <title>慕摄影｜只为你的爱情故事</title>
   <link rel="stylesheet" href="./styles.css">
@@ -56,7 +57,7 @@
           <p class="lead">六年时间，我们陪 4000+ 对新人走进镜头。比起一套标准答案，我们更在意你们相视时的笑、牵手时的默契，以及那些只有彼此懂的小小暗号。</p>
           <div class="story-stats">
             <div><strong>4000<span>+</span></strong><small>已服务新人</small></div>
-            <div><strong>4.9</strong><small>客户好评率</small></div>
+            <div><strong>5.0</strong><small>客户好评率</small></div>
             <div><strong>06</strong><small>专注婚纱摄影年</small></div>
           </div>
           <a class="text-link dark" href="#booking">和老板聊聊你们的故事 <span>↗</span></a>
@@ -134,17 +135,17 @@
         <article class="package-card featured">
           <div class="package-card-top"><span class="package-tag">MOST CHOSEN</span><span class="package-number">01</span></div>
           <div class="package-main"><p class="package-name">臻藏 · 全程定制</p><div class="price"><small>¥</small>5,999</div><p class="old-price">原价 ¥7,999 <b>立省 ¥2,000</b></p><p class="package-desc">给想把婚纱照拍成作品的你。一天拍摄，享受从策划到成片的完整陪伴。</p><a class="package-link" href="#booking" data-package="臻藏套餐 · ¥5,999">预约此套餐 <span>↗</span></a></div>
-          <img src="./assets/5999.jpg" alt="5999元臻藏套餐内容" loading="lazy">
+          <img src="./assets/package-7999.jpg" alt="5999元臻藏套餐内容" loading="lazy">
         </article>
         <article class="package-card">
           <div class="package-card-top"><span class="package-tag">CLASSIC</span><span class="package-number">02</span></div>
           <div class="package-main"><p class="package-name">典藏 · 轻盈记录</p><div class="price"><small>¥</small>3,999</div><p class="old-price">原价 ¥6,999 <b>立省 ¥2,000</b></p><p class="package-desc">保留仪式感，也留出更多自然呼吸。适合喜欢松弛感与电影感的新人。</p><a class="package-link" href="#booking" data-package="典藏套餐 · ¥3,999">预约此套餐 <span>↗</span></a></div>
-          <img src="./assets/4999.jpg" alt="6999元优惠后3999元典藏套餐内容" loading="lazy">
+          <img src="./assets/package-6999.jpg" alt="6999元优惠后3999元典藏套餐内容" loading="lazy">
         </article>
         <article class="package-card">
           <div class="package-card-top"><span class="package-tag">ESSENTIAL</span><span class="package-number">03</span></div>
           <div class="package-main"><p class="package-name">轻奢 · 初见心动</p><div class="price"><small>¥</small>3,999</div><p class="old-price">原价 ¥5,999 <b>立省 ¥2,000</b></p><p class="package-desc">从一组喜欢的照片开始，为你们留下轻松、自然、很像自己的婚纱照。</p><a class="package-link" href="#booking" data-package="轻奢套餐 · ¥3,999">预约此套餐 <span>↗</span></a></div>
-          <img src="./assets/3999.jpg" alt="5999元优惠后3999元轻奢套餐内容" loading="lazy">
+          <img src="./assets/package-5999.jpg" alt="5999元优惠后3999元轻奢套餐内容" loading="lazy">
         </article>
       </div>
     </section>
@@ -152,7 +153,7 @@
     <section class="film section-pad">
       <div class="film-header"><div class="section-kicker"><span>05</span><span>BEHIND THE SCENES</span></div><p class="eyebrow">A DAY AT MUVISION</p><h2>来店里，<br><em>看看故事如何发生。</em></h2></div>
       <div class="video-frame">
-        <video controls preload="metadata" poster="./assets/photo-39.jpg">
+        <video controls preload="metadata" playsinline poster="./assets/photo-39.jpg">
           <source src="./assets/muvideo-enhanced-compressed.mp4" type="video/mp4">
           你的浏览器暂不支持视频播放。
         </video>
@@ -165,11 +166,11 @@
       <div class="booking-grid">
         <div class="booking-copy"><p class="eyebrow">BOOK A CONSULTATION</p><h2>先见面，<br><em>再决定故事的样子。</em></h2><p>告诉我们你们的计划，老板会亲自联系你，聊聊喜欢的风格、拍摄日期和预算。没有推销，只有认真听你们说。</p><div class="direct-contact"><span>老板直联</span><a href="tel:15986770014">159 8677 0014 ↗</a><small>微信：Leiting--888888</small></div></div>
         <form class="booking-form" id="booking-form">
-          <label>怎么称呼你们？<input name="names" required placeholder="例如：小林 & 阿宁"></label>
-          <label>联系电话<input name="phone" required type="tel" pattern="[0-9]{11}" placeholder="请输入 11 位手机号"></label>
-          <div class="form-row"><label>计划拍摄日期<input name="date" type="date"></label><label>更喜欢的风格<select name="style"><option>还没想好，想听建议</option><option>自然纪实</option><option>电影氛围</option><option>轻松俏皮</option><option>高级极简</option></select></label></div>
+          <label>怎么称呼你们？<input name="names" required autocomplete="name" maxlength="60" placeholder="例如：小林 & 阿宁"></label>
+          <label>联系电话<input name="phone" required type="tel" autocomplete="tel" inputmode="tel" maxlength="11" pattern="[0-9]{11}" placeholder="请输入 11 位手机号"></label>
+          <div class="form-row"><label>计划拍摄日期<input name="date" type="date" autocomplete="off"></label><label>更喜欢的风格<select name="style"><option>还没想好，想听建议</option><option>自然纪实</option><option>电影氛围</option><option>轻松俏皮</option><option>高级极简</option></select></label></div>
           <label>想了解的套餐<select name="package" id="package-select"><option>还没决定，先聊聊</option><option>臻藏套餐 · ¥5,999</option><option>典藏套餐 · ¥3,999</option><option>轻奢套餐 · ¥3,999</option></select></label>
-          <label>想对我们说的话<textarea name="message" rows="3" placeholder="比如：喜欢什么样的场景，或者你们的故事"></textarea></label>
+          <label>想对我们说的话<textarea name="message" rows="3" maxlength="300" placeholder="比如：喜欢什么样的场景，或者你们的故事"></textarea></label>
           <button class="submit-button" type="submit">提交预约 <span>↗</span></button>
           <p class="form-note">提交后复制预约内容，添加老板微信并粘贴发送 · 仅用于预约沟通</p>
         </form>
@@ -178,7 +179,7 @@
 
     <section class="location section-pad" id="location">
       <div class="location-grid">
-        <div class="location-copy"><p class="eyebrow">COME FIND US</p><h2>在南稍门，<br>见面聊。</h2><p class="address">西安市碑林区南稍门<br>中贸广场 · 慕摄影</p><p class="subway"><span>地铁</span> 南稍门 G 口出来左拐，步行约 20 米</p><div class="location-actions"><a class="button button-dark" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%B8%82%E7%A2%91%E6%9E%97%E5%8C%BA%E5%8D%97%E7%A8%8D%E9%97%A8%E4%B8%AD%E8%B4%B8%E5%B9%BF%E5%9C%BA%E6%85%95%E6%91%84%E5%BD%B1&city=%E8%A5%BF%E5%AE%89" target="_blank" rel="noreferrer">打开地图导航 ↗</a><a class="text-link dark" href="tel:15986770014">电话联系 <span>↗</span></a></div></div>
+        <div class="location-copy"><p class="eyebrow">COME FIND US</p><h2>在南稍门，<br>见面聊。</h2><p class="address">西安市碑林区南稍门<br>中贸广场 · 慕摄影</p><p class="subway"><span>地铁</span> 南稍门 G 口出来左拐，步行约 20 米</p><div class="location-actions"><a class="button button-dark" href="https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%B8%82%E7%A2%91%E6%9E%97%E5%8C%BA%E5%8D%97%E7%A8%8D%E9%97%A8%E4%B8%AD%E8%B4%B8%E5%B9%BF%E5%9C%BA%E6%85%95%E6%91%84%E5%BD%B1&city=%E8%A5%BF%E5%AE%89" target="_blank" rel="noopener noreferrer">打开地图导航 ↗</a><a class="text-link dark" href="tel:15986770014">电话联系 <span>↗</span></a></div></div>
         <div class="map-card" aria-label="慕摄影位置示意地图"><div class="map-grid-lines"></div><div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div><div class="map-label label-center">中贸广场</div><div class="map-label label-subway"><span>地铁 2 号线</span><b>南稍门 G 口</b></div><div class="map-pin"><i></i><span>慕摄影</span></div><div class="map-street street-a">长安北路</div><div class="map-street street-b">友谊西路</div><div class="map-street street-c">朱雀大街</div><span class="map-compass">N ↑</span></div>
       </div>
     </section>
@@ -188,7 +189,7 @@
 
   <div class="float-contact"><a href="tel:15986770014" class="float-phone" aria-label="拨打老板电话"><span class="float-icon">☎</span><span>老板直联<br><b>159 8677 0014</b></span></a><button class="float-wechat" type="button" aria-label="查看微信号"><span class="float-icon">微</span><span>加微信<br><b>Leiting--888888</b></span></button></div>
 
-  <div class="wechat-modal" id="wechat-modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" type="button" aria-label="关闭">×</button><p class="eyebrow">WECHAT CONTACT</p><h3>添加老板微信</h3><p>微信号：<strong>Leiting--888888</strong></p><div class="wechat-mark">微</div><small>复制微信号，打开微信添加好友</small><button class="copy-wechat" type="button" data-copy="Leiting--888888">复制微信号</button></div></div>
+  <div class="wechat-modal" id="wechat-modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" type="button" aria-label="关闭">×</button><p class="eyebrow">WECHAT CONTACT</p><h3>添加老板微信</h3><p>微信号：<strong>Leiting--888888</strong></p><img class="wechat-image" src="./assets/wechat-contact.jpg" alt="微信联系图片"><small>复制微信号，打开微信添加好友</small><button class="copy-wechat" type="button" data-copy="Leiting--888888">复制微信号</button></div></div>
   <div class="booking-modal" id="booking-modal" aria-hidden="true"><div class="modal-panel booking-modal-panel"><button class="booking-modal-close" type="button" aria-label="关闭预约提示">×</button><p class="eyebrow">WECHAT BOOKING</p><h3>预约内容已整理好</h3><p>复制下面内容，添加老板微信后直接粘贴发送。</p><div class="booking-message" id="booking-message"></div><div class="booking-modal-actions"><button class="copy-booking" type="button">复制预约内容</button><a href="tel:15986770014">电话联系 ↗</a></div><small>老板微信：Leiting--888888</small></div></div>
   <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" type="button" aria-label="关闭大图">×</button><button class="lightbox-arrow prev" type="button" aria-label="上一张">←</button><figure><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-caption"></figcaption></figure><button class="lightbox-arrow next" type="button" aria-label="下一张">→</button></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
