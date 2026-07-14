@@ -1,6 +1,6 @@
 const apiBase = (window.MU_ADMIN_API || '').replace(/\/$/, '');
 const $ = selector => document.querySelector(selector);
-let content;
+let content = null;
 
 function endpoint(path) {
   return `${apiBase}${path}`;
@@ -13,7 +13,6 @@ function show(message, error = false) {
   notice.style.color = error ? '#a23d2b' : '#9b5744';
 }
 
-// Keep the login entry available even when the API is temporarily unreachable.
 const login = $('#login');
 if (login) login.href = endpoint('/auth/login');
 
@@ -24,8 +23,15 @@ async function api(path, options = {}) {
     headers: { 'Content-Type': 'application/json', ...(options.headers || {}) }
   });
   if (!response.ok) {
-    const message = await response.text();
-    throw new Error(message || `请求失败（${response.status}）`);
+    let message = '';
+    try {
+      const body = await response.json();
+      message = body.error || '';
+    } catch {
+      message = await response.text();
+    }
+    if (response.status === 401) message = '\u8bf7\u5148\u70b9\u51fb\u9875\u9762\u53f3\u4e0a\u89d2\u7684\u201c\u767b\u5f55\u540e\u53f0\u201d\u3002';
+    throw new Error(message || `\u8bf7\u6c42\u5931\u8d25\uff08${response.status}\uff09`);
   }
   return response.json();
 }
@@ -53,10 +59,10 @@ function renderPackages() {
   $('#packages').replaceChildren(...content.packages.map((item, index) => {
     const article = document.createElement('article');
     article.className = 'package-editor';
-    article.innerHTML = `<h3>套餐 ${index + 1}</h3>`;
+    article.innerHTML = `<h3>\u5957\u9910 ${index + 1}</h3>`;
     ['tag', 'number', 'name', 'price', 'originalPrice', 'discount', 'description', 'image', 'alt'].forEach(key => {
       const label = document.createElement('label');
-      label.textContent = key === 'description' ? '套餐说明' : key;
+      label.textContent = key === 'description' ? '\u5957\u9910\u8bf4\u660e' : key;
       const input = document.createElement(key === 'description' ? 'textarea' : 'input');
       input.value = item[key] || '';
       input.dataset.package = index;
@@ -76,10 +82,10 @@ function renderGallery() {
     img.src = `../assets/${item.image}`;
     img.alt = item.title || '';
     const caption = document.createElement('figcaption');
-    caption.textContent = `${item.image} · ${item.title || ''}`;
+    caption.textContent = `${item.image} / ${item.title || ''}`;
     const button = document.createElement('button');
     button.type = 'button';
-    button.textContent = '从相册移除';
+    button.textContent = '\u4ece\u76f8\u518c\u79fb\u9664';
     button.onclick = () => {
       content.gallery.splice(index, 1);
       renderGallery();
@@ -91,7 +97,7 @@ function renderGallery() {
 
 async function load() {
   if (!apiBase) {
-    show('请先在 admin/settings.js 填入 Worker 地址。', true);
+    show('\u8bf7\u5148\u5728 admin/settings.js \u586b\u5165 Worker \u5730\u5740\u3002', true);
     return;
   }
   try {
@@ -100,16 +106,21 @@ async function load() {
     renderSite();
     renderPackages();
     renderGallery();
-    $('#status').textContent = `已连接 · ${result.user.email}`;
-    $('#login').textContent = '重新登录';
-    $('#login').href = endpoint('/auth/login');
+    $('#status').textContent = `\u5df2\u8fde\u63a5 \u00b7 ${result.user.email}`;
+    $('#login').textContent = '\u91cd\u65b0\u767b\u5f55';
   } catch (error) {
+    content = null;
+    $('#status').textContent = '\u672a\u8fde\u63a5';
     show(error.message, true);
-    $('#login').href = endpoint('/auth/login');
+    $('#login').textContent = '\u767b\u5f55\u540e\u53f0';
   }
 }
 
 $('#save-site').onclick = async () => {
+  if (!content) {
+    show('\u8bf7\u5148\u767b\u5f55\u540e\u53f0\uff0c\u518d\u4fdd\u5b58\u4fe1\u606f\u3002', true);
+    return;
+  }
   try {
     const site = content.site;
     ['serviceCount', 'rating', 'years', 'heroImage', 'storyImage', 'video', 'phone', 'wechat', 'mapUrl', 'subway'].forEach(key => {
@@ -118,35 +129,43 @@ $('#save-site').onclick = async () => {
     site.slogan = $('#slogan').value.split('\n').map(value => value.trim()).filter(Boolean);
     site.address = $('#address').value.split('\n').map(value => value.trim()).filter(Boolean);
     await api('/api/content', { method: 'PUT', body: JSON.stringify(content) });
-    show('门店信息已保存。');
+    show('\u95e8\u5e97\u4fe1\u606f\u5df2\u4fdd\u5b58\u3002');
   } catch (error) {
     show(error.message, true);
   }
 };
 
 $('#save-packages').onclick = async () => {
+  if (!content) {
+    show('\u8bf7\u5148\u767b\u5f55\u540e\u53f0\uff0c\u518d\u4fdd\u5b58\u5957\u9910\u3002', true);
+    return;
+  }
   try {
     document.querySelectorAll('[data-package][data-key]').forEach(input => {
       content.packages[Number(input.dataset.package)][input.dataset.key] = input.value.trim();
     });
     await api('/api/content', { method: 'PUT', body: JSON.stringify(content) });
-    show('套餐信息已保存。');
+    show('\u5957\u9910\u4fe1\u606f\u5df2\u4fdd\u5b58\u3002');
   } catch (error) {
     show(error.message, true);
   }
 };
 
 async function upload(path, file) {
-  if (!file) throw new Error('请选择文件。');
+  if (!file) throw new Error('\u8bf7\u9009\u62e9\u6587\u4ef6\u3002');
   const data = await fileToBase64(file);
   await api('/api/upload', { method: 'POST', body: JSON.stringify({ path, data }) });
 }
 
 $('#upload-photo').onclick = async () => {
+  if (!content) {
+    show('\u8bf7\u5148\u767b\u5f55\u540e\u53f0\uff0c\u518d\u4e0a\u4f20\u7167\u7247\u3002', true);
+    return;
+  }
   try {
     const name = $('#photo-name').value.trim();
     if (!/^photo-[a-z0-9_-]+\.(jpg|jpeg|png|webp)$/i.test(name)) {
-      throw new Error('文件名请使用 photo-40.jpg 这类格式。');
+      throw new Error('\u6587\u4ef6\u540d\u8bf7\u4f7f\u7528 photo-40.jpg \u8fd9\u7c7b\u683c\u5f0f\u3002');
     }
     await upload(`assets/${name}`, $('#photo-file').files[0]);
     const existing = content.gallery.find(item => item.image === name);
@@ -154,20 +173,24 @@ $('#upload-photo').onclick = async () => {
       existing.category = $('#photo-category').value;
       existing.title = $('#photo-title').value.trim() || existing.title;
     } else {
-      content.gallery.push({ image: name, category: $('#photo-category').value, title: $('#photo-title').value.trim() || '新的客片', layout: '' });
+      content.gallery.push({ image: name, category: $('#photo-category').value, title: $('#photo-title').value.trim() || '\u65b0\u7684\u5ba2\u7247', layout: '' });
     }
     await api('/api/content', { method: 'PUT', body: JSON.stringify(content) });
     renderGallery();
-    show('客片已上传并保存。');
+    show('\u5ba2\u7247\u5df2\u4e0a\u4f20\u5e76\u4fdd\u5b58\u3002');
   } catch (error) {
     show(error.message, true);
   }
 };
 
 $('#upload-package').onclick = async () => {
+  if (!content) {
+    show('\u8bf7\u5148\u767b\u5f55\u540e\u53f0\uff0c\u518d\u66f4\u6362\u5957\u9910\u56fe\u7247\u3002', true);
+    return;
+  }
   try {
     await upload(`assets/${$('#package-image').value}`, $('#package-file').files[0]);
-    show('套餐图片已替换。');
+    show('\u5957\u9910\u56fe\u7247\u5df2\u66f4\u6362\u3002');
   } catch (error) {
     show(error.message, true);
   }
