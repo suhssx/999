@@ -8,57 +8,284 @@
     "heroAlt": "慕摄影婚纱客片",
     "storyImage": "photo-39.jpg",
     "storyAlt": "慕摄影婚纱客片",
-    "slogan": ["我们从不批量制造婚纱照，", "只用心倾听每一对新人的爱情故事，", "定格独一无二的心动瞬间。"],
+    "slogan": [
+      "我们从不批量制造婚纱照，",
+      "只用心倾听每一对新人的爱情故事，",
+      "定格独一无二的心动瞬间。"
+    ],
     "phone": "15986770014",
     "wechat": "Leiting--888888",
-    "address": ["西安市碑林区南稍门中贸广场", "15号楼2单元601室"],
+    "address": [
+      "西安市碑林区南稍门中贸广场",
+      "15号楼2单元601室"
+    ],
     "subway": "南稍门 G 口出来左拐，步行约 20 米",
     "mapUrl": "https://uri.amap.com/search?keyword=%E8%A5%BF%E5%AE%89%E5%B8%82%E7%A2%91%E6%9E%97%E5%8C%BA%E5%8D%97%E7%A8%8D%E9%97%A8%E4%B8%AD%E8%B4%B8%E5%B9%BF%E5%9C%BA%E6%85%95%E6%91%84%E5%BD%B1&city=%E8%A5%BF%E5%AE%89",
     "video": "muvideo-enhanced-compressed.mp4"
   },
   "packages": [
-    {"tag":"MOST CHOSEN","number":"01","name":"臻藏 · 全程定制","price":"5,999","originalPrice":"7,999","discount":"2,000","description":"给想把婚纱照拍成作品的你，一天拍摄，享受从策划到成片的完整陪伴。","image":"package-7999.jpg","alt":"5999 元臻藏套餐"},
-    {"tag":"CLASSIC","number":"02","name":"典藏 · 轻盈记录","price":"3,999","originalPrice":"6,999","discount":"2,000","description":"保留仪式感，也留出更多自然呼吸，适合喜欢松弛感与电影感的新人。","image":"package-6999.jpg","alt":"3999 元典藏套餐"},
-    {"tag":"ESSENTIAL","number":"03","name":"轻奢 · 初见心动","price":"3,999","originalPrice":"5,999","discount":"2,000","description":"从一组喜欢的照片开始，为你们留下轻松、自然、很像自己的婚纱照。","image":"package-5999.jpg","alt":"3999 元轻奢套餐"}
+    {
+      "tag": "MOST CHOSEN",
+      "number": "01",
+      "name": "臻藏 · 全程定制",
+      "price": "5,999",
+      "originalPrice": "7,999",
+      "discount": "2,000",
+      "description": "给想把婚纱照拍成作品的你，一天拍摄，享受从策划到成片的完整陪伴。",
+      "image": "package-7999.jpg",
+      "alt": "5999 元臻藏套餐"
+    },
+    {
+      "tag": "CLASSIC",
+      "number": "02",
+      "name": "典藏 · 轻盈记录",
+      "price": "3,999",
+      "originalPrice": "6,999",
+      "discount": "2,000",
+      "description": "保留仪式感，也留出更多自然呼吸，适合喜欢松弛感与电影感的新人。",
+      "image": "package-6999.jpg",
+      "alt": "3999 元典藏套餐"
+    },
+    {
+      "tag": "ESSENTIAL",
+      "number": "03",
+      "name": "轻奢 · 初见心动",
+      "price": "3,999",
+      "originalPrice": "5,999",
+      "discount": "2,000",
+      "description": "从一组喜欢的照片开始，为你们留下轻松、自然、很像自己的婚纱照。",
+      "image": "package-5999.jpg",
+      "alt": "3999 元轻奢套餐"
+    }
   ],
   "gallery": [
-    {"image":"photo-01.jpg","category":"scene","title":"客片 01","layout":"gallery-item--wide"},
-    {"image":"photo-02.jpg","category":"portrait","title":"客片 02","layout":"gallery-item--tall"},
-    {"image":"photo-03.jpg","category":"detail","title":"客片 03","layout":""},
-    {"image":"photo-04.jpg","category":"scene","title":"客片 04","layout":""},
-    {"image":"photo-05.jpg","category":"portrait","title":"客片 05","layout":"gallery-item--tall"},
-    {"image":"photo-06.jpg","category":"scene","title":"客片 06","layout":""},
-    {"image":"photo-07.jpg","category":"portrait","title":"客片 07","layout":"gallery-item--wide"},
-    {"image":"photo-08.jpg","category":"detail","title":"客片 08","layout":""},
-    {"image":"photo-09.jpg","category":"scene","title":"客片 09","layout":"gallery-item--tall"},
-    {"image":"photo-10.jpg","category":"portrait","title":"客片 10","layout":""},
-    {"image":"photo-11.jpg","category":"scene","title":"客片 11","layout":"gallery-item--wide"},
-    {"image":"photo-12.jpg","category":"detail","title":"客片 12","layout":""},
-    {"image":"photo-13.jpg","category":"portrait","title":"客片 13","layout":"gallery-item--tall"},
-    {"image":"photo-14.jpg","category":"scene","title":"客片 14","layout":""},
-    {"image":"photo-15.jpg","category":"detail","title":"客片 15","layout":"gallery-item--wide"},
-    {"image":"photo-16.jpg","category":"portrait","title":"客片 16","layout":""},
-    {"image":"photo-17.jpg","category":"scene","title":"客片 17","layout":"gallery-item--tall"},
-    {"image":"photo-18.jpg","category":"detail","title":"客片 18","layout":""},
-    {"image":"photo-19.jpg","category":"portrait","title":"客片 19","layout":"gallery-item--wide"},
-    {"image":"photo-20.jpg","category":"scene","title":"客片 20","layout":""},
-    {"image":"photo-21.jpg","category":"portrait","title":"客片 21","layout":"gallery-item--tall"},
-    {"image":"photo-22.jpg","category":"detail","title":"客片 22","layout":""},
-    {"image":"photo-23.jpg","category":"scene","title":"客片 23","layout":"gallery-item--wide"},
-    {"image":"photo-25.jpg","category":"detail","title":"客片 25","layout":""},
-    {"image":"photo-26.jpg","category":"scene","title":"客片 26","layout":"gallery-item--tall"},
-    {"image":"photo-27.jpg","category":"portrait","title":"客片 27","layout":""},
-    {"image":"photo-28.jpg","category":"scene","title":"客片 28","layout":"gallery-item--wide"},
-    {"image":"photo-29.jpg","category":"detail","title":"客片 29","layout":""},
-    {"image":"photo-30.jpg","category":"portrait","title":"客片 30","layout":"gallery-item--tall"},
-    {"image":"photo-31.jpg","category":"scene","title":"客片 31","layout":""},
-    {"image":"photo-32.jpg","category":"portrait","title":"客片 32","layout":"gallery-item--wide"},
-    {"image":"photo-33.jpg","category":"detail","title":"客片 33","layout":""},
-    {"image":"photo-34.jpg","category":"scene","title":"客片 34","layout":"gallery-item--tall"},
-    {"image":"photo-35.jpg","category":"portrait","title":"客片 35","layout":""},
-    {"image":"photo-36.jpg","category":"scene","title":"客片 36","layout":"gallery-item--wide"},
-    {"image":"photo-37.jpg","category":"detail","title":"客片 37","layout":""},
-    {"image":"photo-38.jpg","category":"portrait","title":"客片 38","layout":"gallery-item--tall"},
-    {"image":"photo-39.jpg","category":"scene","title":"客片 39","layout":""}
+    {
+      "image": "photo-01.jpg",
+      "category": "scene",
+      "title": "客片 01",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-02.jpg",
+      "category": "portrait",
+      "title": "客片 02",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-03.jpg",
+      "category": "detail",
+      "title": "客片 03",
+      "layout": ""
+    },
+    {
+      "image": "photo-04.jpg",
+      "category": "scene",
+      "title": "客片 04",
+      "layout": ""
+    },
+    {
+      "image": "photo-05.jpg",
+      "category": "portrait",
+      "title": "客片 05",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-06.jpg",
+      "category": "scene",
+      "title": "客片 06",
+      "layout": ""
+    },
+    {
+      "image": "photo-07.jpg",
+      "category": "portrait",
+      "title": "客片 07",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-08.jpg",
+      "category": "detail",
+      "title": "客片 08",
+      "layout": ""
+    },
+    {
+      "image": "photo-09.jpg",
+      "category": "scene",
+      "title": "客片 09",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-10.jpg",
+      "category": "portrait",
+      "title": "客片 10",
+      "layout": ""
+    },
+    {
+      "image": "photo-11.jpg",
+      "category": "scene",
+      "title": "客片 11",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-12.jpg",
+      "category": "detail",
+      "title": "客片 12",
+      "layout": ""
+    },
+    {
+      "image": "photo-13.jpg",
+      "category": "portrait",
+      "title": "客片 13",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-14.jpg",
+      "category": "scene",
+      "title": "客片 14",
+      "layout": ""
+    },
+    {
+      "image": "photo-15.jpg",
+      "category": "detail",
+      "title": "客片 15",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-16.jpg",
+      "category": "portrait",
+      "title": "客片 16",
+      "layout": ""
+    },
+    {
+      "image": "photo-17.jpg",
+      "category": "scene",
+      "title": "客片 17",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-18.jpg",
+      "category": "detail",
+      "title": "客片 18",
+      "layout": ""
+    },
+    {
+      "image": "photo-19.jpg",
+      "category": "portrait",
+      "title": "客片 19",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-20.jpg",
+      "category": "scene",
+      "title": "客片 20",
+      "layout": ""
+    },
+    {
+      "image": "photo-21.jpg",
+      "category": "portrait",
+      "title": "客片 21",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-22.jpg",
+      "category": "detail",
+      "title": "客片 22",
+      "layout": ""
+    },
+    {
+      "image": "photo-23.jpg",
+      "category": "scene",
+      "title": "客片 23",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-25.jpg",
+      "category": "detail",
+      "title": "客片 25",
+      "layout": ""
+    },
+    {
+      "image": "photo-26.jpg",
+      "category": "scene",
+      "title": "客片 26",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-27.jpg",
+      "category": "portrait",
+      "title": "客片 27",
+      "layout": ""
+    },
+    {
+      "image": "photo-28.jpg",
+      "category": "scene",
+      "title": "客片 28",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-29.jpg",
+      "category": "detail",
+      "title": "客片 29",
+      "layout": ""
+    },
+    {
+      "image": "photo-30.jpg",
+      "category": "portrait",
+      "title": "客片 30",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-31.jpg",
+      "category": "scene",
+      "title": "客片 31",
+      "layout": ""
+    },
+    {
+      "image": "photo-32.jpg",
+      "category": "portrait",
+      "title": "客片 32",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-33.jpg",
+      "category": "detail",
+      "title": "客片 33",
+      "layout": ""
+    },
+    {
+      "image": "photo-34.jpg",
+      "category": "scene",
+      "title": "客片 34",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-35.jpg",
+      "category": "portrait",
+      "title": "客片 35",
+      "layout": ""
+    },
+    {
+      "image": "photo-36.jpg",
+      "category": "scene",
+      "title": "客片 36",
+      "layout": "gallery-item--wide"
+    },
+    {
+      "image": "photo-37.jpg",
+      "category": "detail",
+      "title": "客片 37",
+      "layout": ""
+    },
+    {
+      "image": "photo-38.jpg",
+      "category": "portrait",
+      "title": "客片 38",
+      "layout": "gallery-item--tall"
+    },
+    {
+      "image": "photo-39.jpg",
+      "category": "scene",
+      "title": "客片 39",
+      "layout": ""
+    }
   ]
 }
